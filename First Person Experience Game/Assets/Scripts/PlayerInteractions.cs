@@ -19,7 +19,35 @@ public class PlayerInteractions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         if (triggerColl == null)
+   
+    {
+        gmSc.infoText.text = " ";
+    }
+
+  if (triggerColl != null && Input.GetKeyDown(KeyCode.E))
+
+    {
+      if (triggerColl.gameObject.CompareTag("Lock") && gmSc.hasKey)
+        {
+            gmSc.hasKey = false;
+            gmSc.infoText.text = " ";
+            Destroy(triggerColl.gameObject);           
+        }
+
+        if (triggerColl.gameObject.CompareTag("Lever"))
+        {
+            Lever leverSc = triggerColl.gameObject.GetComponent<Lever>();
+            leverSc.isOn = !leverSc.isOn;
+
+        }
+
+
+
+
+    }
+
+
     }
 
    void OnTriggerEnter(Collider other)
@@ -50,14 +78,23 @@ public class PlayerInteractions : MonoBehaviour
     {
         gmSc.infoText.text = "Press E To Switch";
     }
-
-
-
-
-
-
-
-
     }
+
+
+    void OnTriggerExit(Collider other)
+
+    {
+        triggerColl = null;
+
+    
+   
+   
+   
+    }
+
+
+
+
+
 
 }

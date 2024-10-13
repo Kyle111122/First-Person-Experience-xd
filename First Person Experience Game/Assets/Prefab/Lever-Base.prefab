@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1432818307935127749}
   - component: {fileID: 5491120956251773000}
   - component: {fileID: 3184643433375702560}
+  - component: {fileID: 824223513995062186}
   m_Layer: 0
   m_Name: Lever-Base
   m_TagString: Lever
@@ -207,9 +208,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.061544526, y: 0.036660172, z: 0.05191596}
+  m_Size: {x: 0.09169428, y: 0.11072273, z: 0.13219891}
   m_Center: {x: -0.000000027008365, y: 6.4392952e-15, z: -0.0043881238}
+--- !u!114 &824223513995062186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3454932402838089739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bf474e919a02746ba4019b5293d321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  moveSpeed: 0
+  bridge: {fileID: 0}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
