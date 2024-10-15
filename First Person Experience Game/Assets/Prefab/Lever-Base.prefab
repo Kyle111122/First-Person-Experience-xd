@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOn: 0
-  moveSpeed: 0
+  moveSpeed: 5
   bridge: {fileID: 0}
   pointA: {fileID: 0}
   pointB: {fileID: 0}
