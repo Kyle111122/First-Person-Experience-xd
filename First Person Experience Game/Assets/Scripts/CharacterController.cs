@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
    public float movementSpeed;
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
    public CharacterController controller;
    public GameObject cam;
    public GameObject playerHead;
+
+   public string spawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -62,8 +65,18 @@ public class PlayerController : MonoBehaviour
         playerHead.transform.rotation = Quaternion.Slerp(playerHead.transform.rotation, cam.transform.rotation, cameraSpeed * Time.deltaTime);
     }
 
-
-
-
+    public IEnumerator ResetPos()
+    {
+        controller.enabled = false;
+        transform.position = GameObject.Find(spawnPoint).transform.position;
+       yield return new WaitForSeconds(.1f); 
+       controller.enabled = true;  
+    }
+    public IEnumerator LoadNewScene(string levelName)
+    {
+        controller.enabled = false;
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(levelName);
+    }
 
 }
