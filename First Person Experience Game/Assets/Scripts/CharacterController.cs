@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
    public GameObject cam;
    public GameObject playerHead;
 
+    public Animator bbox;
    public string spawnPoint;
 
     // Start is called before the first frame update
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator ResetPos()
     {
+        bbox.SetBool("out", true);
         controller.enabled = false;
         transform.position = GameObject.Find(spawnPoint).transform.position;
        yield return new WaitForSeconds(.1f); 
@@ -74,6 +76,7 @@ public class PlayerController : MonoBehaviour
     }
     public IEnumerator LoadNewScene(string levelName)
     {
+         bbox.SetBool("out", false);
         controller.enabled = false;
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(levelName);

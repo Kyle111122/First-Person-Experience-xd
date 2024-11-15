@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DND : MonoBehaviour
 {
-    GameObject dndObject; 
+   private static GameObject dndObject; 
     // Start is called before the first frame update
     void Awake()
     {
