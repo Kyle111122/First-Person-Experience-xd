@@ -66,6 +66,24 @@ public class PlayerController : MonoBehaviour
         playerHead.transform.rotation = Quaternion.Slerp(playerHead.transform.rotation, cam.transform.rotation, cameraSpeed * Time.deltaTime);
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Spikes"))
+        {StartCoroutine(ResetOnDeath());
+        }
+    }
+      public IEnumerator ResetOnDeath()
+    {
+        bbox.SetBool("out", false);
+        controller.enabled = false;
+         yield return new WaitForSeconds(1f); 
+
+         bbox.SetBool("out", true);
+        transform.position = GameObject.Find(spawnPoint).transform.position;
+       yield return new WaitForSeconds(.1f); 
+       controller.enabled = true;  
+    }
+
     public IEnumerator ResetPos()
     {
         bbox.SetBool("out", true);
