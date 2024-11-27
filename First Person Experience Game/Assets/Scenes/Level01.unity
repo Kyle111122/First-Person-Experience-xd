@@ -4185,6 +4185,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c6a6edb7b0a2d634b91f25cdd99087b7, type: 2}
+    - target: {fileID: 2945972935703521204, guid: d10c618235c50c343b0d93c99f414170,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3070099411578857158, guid: d10c618235c50c343b0d93c99f414170,
         type: 3}
       propertyPath: m_RootOrder
@@ -4255,6 +4260,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CyberCityPackV1
       objectReference: {fileID: 0}
+    - target: {fileID: 5322926865957845765, guid: d10c618235c50c343b0d93c99f414170,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5629114958281633447, guid: d10c618235c50c343b0d93c99f414170,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4270,6 +4280,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c6a6edb7b0a2d634b91f25cdd99087b7, type: 2}
+    - target: {fileID: 6217239558895216885, guid: d10c618235c50c343b0d93c99f414170,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6590862027556664004, guid: d10c618235c50c343b0d93c99f414170,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4285,6 +4300,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c6a6edb7b0a2d634b91f25cdd99087b7, type: 2}
+    - target: {fileID: 8207395011848867803, guid: d10c618235c50c343b0d93c99f414170,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8325251274565086603, guid: d10c618235c50c343b0d93c99f414170,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
